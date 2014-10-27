@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html ng-app="MyFiles">
+<head>
+    <meta charset="utf-8" />
+    <title>OneDriveExplorer</title>
+    <script src="scripts/safehtml.js"></script>
+
+    <!-- Bootstrap & JQuery -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+
+    <!-- AngularJs -->
+    <script src="scripts/angular.js"></script>
+
+    <!-- Utilities -->
+    <script src="scripts/underscore-min.js"></script>
+
+    <!-- Office365 Service Libraries -->
+    <script src="services/office365/scripts/o365loader.js"></script>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/index.js"></script>
+
+    <style>
+        .icon-folder {
+            background-image: url('images/folder.png');
+            height:30px;
+            width:30px;
+        }
+        .icon-docx {
+            background-image: url('images/docx.png');
+            height:30px;
+            width:30px;
+        }
+        .icon-xlsx {
+            background-image: url('images/xlsx.png');
+            height:30px;
+            width:30px;
+        }
+        .icon-pptx {
+            background-image: url('images/pptx.png');
+            height:30px;
+            width:30px;
+        }
+        .icon-one {
+            background-image: url('images/one.png');
+            height:30px;
+            width:30px;
+        }
+        .icon-onetoc2 {
+            background-image: url('images/onetoc2.png');
+            height:30px;
+            width:30px;
+        }
+        .footer {
+            background:#00b4ff;
+            font-weight:700;
+            padding:10px;
+            text-align:center;
+        }
+
+        .footer > a {
+            color:#FFF;
+        }
+    </style>
+</head>
+<body ng-controller="AppCtrl">
+    <header class="navbar navbar-inverse bs-docs-nav" id="top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1 style="color: #ffffff;">&nbsp;OneDrive Explorer</h1>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-show="userLoggedIn"><h2 style="color: #ff6a00;">&nbsp;{{userName}}</h2></li>
+                    <li ng-show="userLoggedIn"><h2 style="color: #808080;"> <span ng-click="logout()">&nbsp;(Logout)</span></h2></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="jumbotron text-center" ng-show="!userLoggedIn">
+            <h1>Explore Your Files</h1>
+            <img class="col" src="images/OneDrive.png">
+            <p class="lead">This is a sample application that demonstrates how Office365 JavaScript APIs can be used to build a basic file explorer that enumerates files in your organizational OneDrive.</p>
+            <p><a class="btn btn-lg btn-success" href="#" ng-click="login()" role="button">Login</a></p>
+        </div>
+
+        <div id="loading">
+            <button type="button" class="btn btn-primary">Loading ...</button>
+        </div>
+
+        <div class="row" ng-show="userLoggedIn">
+            <div class="col-md-12" ng-show="contentLoaded">
+                <div class="page-header">
+                    <h1 style="vertical-align:middle;"><a><span class="glyphicon glyphicon-chevron-left" ng-show="!topLevelStack" ng-click="navigateBack()"></span></a>  {{myFilesStack[myFilesStack.length-1].name}}</></h1>
+                </div>
+                <ul>
+                    <li ng-repeat="file in myFilesStack[myFilesStack.length-1]" style="list-style-image:url(images/{{file.type}}.png);">
+                        <h2><a ng-click="navigateInto($index)">{{file.name}}</a></h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Static bottom navbar -->
+        <div class="navbar navbar-default navbar-inverse navbar-fixed-bottom" ng-show="userLoggedIn">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bottom-collapse">
+                        <!-- NOTE! data-target was changed to .bottom-collapse -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse bottom-collapse">
+                    <!-- NOTE! The extra bottom-collapse class put on here -->
+                    <ul class="nav navbar-nav">
+                        <li><a ng-click="addFileItem()"><span class="glyphicon glyphicon glyphicon-plus"></span> Add</a></li>
+                        <li><a ng-click="toggleDeleteMode()"><span class="glyphicon glyphicon glyphicon-trash"></span> Delete</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="scripts/app.js"></script>
+</html>

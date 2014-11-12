@@ -35,7 +35,6 @@ Before you can build and run the app, you need to register the app to consume Of
   5. To register for the services used in this sample, choose the following permissions, and select the Permissions link to set the following permissions:
 	 - (My Files) – Enable Read users files
   6. After clicking OK in the Services Manager window, JavaScript client libraries for Office 365 will be added to your project.
-  8. Build the solution.
 
 <a name="build"></a>
 ## Build ##

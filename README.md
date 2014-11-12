@@ -3,7 +3,8 @@
 **Table of Contents**
 
 - [Overview](#overview)
-- [Prerequisites and Configuration](#prerequisites)
+- [Prerequisites](#prerequisites)
+- [Configuration](#configuration)
 - [Build](#build)
 - [License](https://github.com/OfficeDev/OneDriveExplorer/blob/master/LICENSE)
 
@@ -20,8 +21,8 @@ To run this sample, you need:
 2. [Multi-Device Hybrid Apps (Preview) Extension](http://www.visualstudio.com/en-us/explore/cordova-vs.aspx)
 3. [Office 365 API Tools for Visual Studio 2013](https://visualstudiogallery.msdn.microsoft.com/7e947621-ef93-4de7-93d3-d796c43ba34f)
 4. An [Office 365 developer site](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1).
-5. A subscription to [Microsoft Azure](http://azure.microsoft.com/en-us/)
 
+<a name="configuration"></a>
 ## Configuration ##
 
 Before you can build and run the app, you need to register the app to consume Office 365 services and install the client libraries. You can do this via the Office 365 API Tools for Visual Studio (which automates the registration process). Be sure to download and install the [Office 365 API tools](http://visualstudiogallery.msdn.microsoft.com/7e947621-ef93-4de7-93d3-d796c43ba34f) from the Visual Studio Gallery and follow these steps.
@@ -36,6 +37,7 @@ Before you can build and run the app, you need to register the app to consume Of
   6. After clicking OK in the Services Manager window, JavaScript client libraries for Office 365 will be added to your project.
   8. Build the solution.
 
-  ## Build ##
+<a name="build"></a>
+## Build ##
 
-  Select Windows-AnyCPU as your build target and press F5 to build and debug. Run the application and sign in with your organizational account to Office 365.
+Select Windows-AnyCPU as your build target and press F5 to build and debug. Run the application and sign in with your organizational account to Office 365.

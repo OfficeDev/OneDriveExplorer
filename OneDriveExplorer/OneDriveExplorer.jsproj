@@ -116,7 +116,6 @@
     <Content Include="images\pptx.png" />
     <Content Include="images\xlsx.png" />
     <Content Include="merges\windows8\services\office365\scripts\InAppBrowserOverride.js" />
-    <Content Include="packages.config" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -124,15 +123,6 @@
     <Content Include="scripts\jquery.js" />
     <Content Include="scripts\safehtml.js" />
     <Content Include="scripts\underscore-min.js" />
-    <Content Include="services\office365\redirectTarget.html" />
-    <Content Include="services\office365\scripts\exchange.js" />
-    <Content Include="services\office365\scripts\InAppBrowserOverride.js" />
-    <Content Include="services\office365\scripts\o365auth.js" />
-    <Content Include="services\office365\scripts\o365discovery.js" />
-    <Content Include="services\office365\scripts\o365loader.js" />
-    <Content Include="services\office365\scripts\sharepoint.js" />
-    <Content Include="services\office365\scripts\utility.js" />
-    <Content Include="services\office365\settings\settings.js" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Folder Include="merges\ios\" />
@@ -196,14 +186,6 @@
     <Content Include="res\screens\ios\screen-iphone-portrait-2x.png" />
     <Content Include="res\screens\windows8\splashscreen.png" />
     <Content Include="res\screens\wp8\screen-portrait.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="services\office365\scripts\typings\exchange.d.ts" />
-    <TypeScriptCompile Include="services\office365\scripts\typings\o365auth.d.ts" />
-    <TypeScriptCompile Include="services\office365\scripts\typings\o365discovery.d.ts" />
-    <TypeScriptCompile Include="services\office365\scripts\typings\sharepoint.d.ts" />
-    <TypeScriptCompile Include="services\office365\scripts\typings\utility.d.ts" />
-    <TypeScriptCompile Include="services\office365\settings\typings\settings.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>

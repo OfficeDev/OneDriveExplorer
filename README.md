@@ -20,7 +20,7 @@ To run this sample, you need:
 1. Visual Studio 2013 with Update 3
 2. [Multi-Device Hybrid Apps (Preview) Extension](http://www.visualstudio.com/en-us/explore/cordova-vs.aspx)
 3. [Office 365 API Tools for Visual Studio 2013](https://visualstudiogallery.msdn.microsoft.com/a15b85e6-69a7-4fdf-adda-a38066bb5155)
-4. An [Office 365 developer site](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1).
+4. An Office 365 developer site. If you don't already have one, [join the Office 365 Developer Program and get a free 1 year subscription to Office 365](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033)
 
 <a name="configuration"></a>
 ## Configuration ##

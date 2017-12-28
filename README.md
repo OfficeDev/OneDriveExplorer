@@ -40,3 +40,5 @@ Before you can build and run the app, you need to register the app to consume Of
 ## Build ##
 
 Select Windows-AnyCPU as your build target and press F5 to build and debug. Run the application and sign in with your organizational account to Office 365.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
